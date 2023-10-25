@@ -2,9 +2,30 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import GameFetcher from './GameFetcher'
 
 function App() {
   const [count, setCount] = useState(0)
+/*   const [playerData, setPlayerData] = useState(null)
+
+  const fetchPlayerData = () => {
+    fetch('https://statsapi.web.nhl.com/api/v1/game/2023020063/boxscore')
+      .then(res => {
+        return res.json()
+      })
+      .then(data => {
+        setPlayerData(data)
+      })
+  }
+
+  useEffect(() => {
+    console.log('use effect initiated')
+    fetchPlayerData()
+  }, [])
+
+  console.log('playerData: ', playerData) */
+
+  GameFetcher()
 
   return (
     <>
@@ -23,6 +44,7 @@ function App() {
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
+{/*           Patu: {playerData.teams.home.players.ID8479339.stats.skaterStats.assists} */}
         </p>
       </div>
       <p className="read-the-docs">
