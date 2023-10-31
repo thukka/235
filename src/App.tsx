@@ -3,29 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import GameFetcher from './GameFetcher'
+import PlayerFetcher from './PlayerFetcher'
 
 function App() {
   const [count, setCount] = useState(0)
-/*   const [playerData, setPlayerData] = useState(null)
-
-  const fetchPlayerData = () => {
-    fetch('https://statsapi.web.nhl.com/api/v1/game/2023020063/boxscore')
-      .then(res => {
-        return res.json()
-      })
-      .then(data => {
-        setPlayerData(data)
-      })
-  }
-
-  useEffect(() => {
-    console.log('use effect initiated')
-    fetchPlayerData()
-  }, [])
-
-  console.log('playerData: ', playerData) */
 
   GameFetcher()
+  PlayerFetcher()
 
   return (
     <>

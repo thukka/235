@@ -44,7 +44,7 @@ function GameFetcher(): GamePks {
     
     let gamesArr;
     
-    console.log(games)
+    /* console.log(games) */
     const pkList: Array<number> = [];
     let fetchedGamePks = {
         totalGames: 0,
@@ -65,7 +65,7 @@ function GameFetcher(): GamePks {
         }
     }
 
-    console.log('fetchedGamePks: ', fetchedGamePks)
+    /* console.log('fetchedGamePks: ', fetchedGamePks) */
     return fetchedGamePks
 }
 
